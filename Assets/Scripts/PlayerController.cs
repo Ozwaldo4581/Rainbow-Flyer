@@ -57,7 +57,7 @@ public class PlayerController : MonoBehaviour
 
         if (!enabled)
         {
-            rb.velocity = Vector2.zero;
+            rb.linearVelocity = Vector2.zero;
             rb.angularVelocity = 0f;
             flapRequested = false;
         }
@@ -75,7 +75,7 @@ public class PlayerController : MonoBehaviour
         transform.position = startPos;
         transform.rotation = startRot;
 
-        rb.velocity = Vector2.zero;
+        rb.linearVelocity = Vector2.zero;
         rb.angularVelocity = 0f;
         flapRequested = false;
 
@@ -91,7 +91,7 @@ public class PlayerController : MonoBehaviour
         // Sprite swap based on vertical velocity
         if (spriteRenderer != null)
         {
-            if (rb.velocity.y > 0.01f && ascendingSprite != null) spriteRenderer.sprite = ascendingSprite;
+            if (rb.linearVelocity.y > 0.01f && ascendingSprite != null) spriteRenderer.sprite = ascendingSprite;
             else if (descendingSprite != null) spriteRenderer.sprite = descendingSprite;
         }
     }
@@ -104,10 +104,10 @@ public class PlayerController : MonoBehaviour
         {
             flapRequested = false;
 
-            Vector2 v = rb.velocity;
+            Vector2 v = rb.linearVelocity;
             v.y = flapVelocity;
             if (v.y > maxUpwardVelocity) v.y = maxUpwardVelocity;
-            rb.velocity = v;
+            rb.linearVelocity = v;
         }
 
         if (clampTopOfScreen && transform.position.y > topClampY)
@@ -116,9 +116,9 @@ public class PlayerController : MonoBehaviour
             p.y = topClampY;
             transform.position = p;
 
-            Vector2 v = rb.velocity;
+            Vector2 v = rb.linearVelocity;
             if (v.y > 0) v.y = 0;
-            rb.velocity = v;
+            rb.linearVelocity = v;
         }
     }
 
