@@ -1234,7 +1234,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53adf4e6e3faa814c91016b628d418f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trailCapPoints: 80
+  trailCapPoints: 200
   pointsPerScore: 2
   sampleInterval: 0.01
   player: {fileID: 793747992}
@@ -1414,9 +1414,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.04922829}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 1.9276083
 --- !u!50 &793747990
 Rigidbody2D:
   serializedVersion: 4
@@ -2043,8 +2043,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicSource: {fileID: 1096060303}
   sfxSource: {fileID: 63381895}
-  musicLoop: {fileID: 8300000, guid: eba11ad278afb014bb597fd704255ced, type: 3}
-  deathJingle: {fileID: 8300000, guid: c083f0af36902614a9e8c1dda7bf3cee, type: 3}
+  musicLoop: {fileID: 8300000, guid: e1ccc6b8a8365974584675c46f2d531a, type: 3}
+  deathJingle: {fileID: 8300000, guid: fe941aa9d39440d46bcf7cbe759c0b3f, type: 3}
   flapSfx: {fileID: 8300000, guid: 528d99200b698654197d7be516b8816b, type: 3}
 --- !u!1 &1087679071
 GameObject:
@@ -2231,15 +2231,15 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: eba11ad278afb014bb597fd704255ced, type: 3}
+  m_audioClip: {fileID: 8300000, guid: e1ccc6b8a8365974584675c46f2d531a, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.683
   m_Pitch: 1
   Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 127
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
